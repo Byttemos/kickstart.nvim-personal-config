@@ -1,5 +1,6 @@
 # kickstart.nvim
-
+## Preface
+This is my own personal configuration of Neovim, forked from the original repository. For the time being, the complete readme from the original repository will remain here, unchanged. At some point I might have a config that is customized enough to warrant separate documentation, but for now this pretty much covers it.
 ## Introduction
 
 A starting point for Neovim that is:
