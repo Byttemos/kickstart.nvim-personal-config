@@ -1,6 +1,14 @@
 # kickstart.nvim
 ## Preface
 This is my own personal configuration of Neovim, forked from the original repository. For the time being, the complete readme from the original repository will remain here, unchanged. At some point I might have a config that is customized enough to warrant separate documentation, but for now this pretty much covers it.
+
+###
+Personal Keybinds
+|Keybind|Description|
+|:--    |:----      |
+|space-g-g|Open Neogit at whatever directory the current buffer is located|
+|space-o-p|Open Neotree, a tree-style file explorer at current directory|
+
 ## Introduction
 
 A starting point for Neovim that is:
