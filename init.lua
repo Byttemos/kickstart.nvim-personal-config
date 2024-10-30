@@ -176,10 +176,21 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- HENRIKS KEYMAPS
-vim.keymap.set('n', '<leader>gg', ':Neogit cwd=%:p:h <CR>')
-vim.keymap.set('n', '<leader>op', ':Neotree toggle <CR>')
+vim.keymap.set('n', '<leader>gg', ':Neogit cwd=%:p:h <CR>', { desc = 'Open Neogit in current buffers dir' })
+vim.keymap.set('n', '<leader>op', ':Neotree toggle <CR>', { desc = 'Toggle Neotree file explorer' })
+vim.keymap.set('n', '<leader>fs', ':w <CR>', { desc = 'Save/write current buffer to file' })
+vim.keymap.set('n', '<leader>ww', ':wincmd w <CR>', { desc = 'Cycle between open windows' })
+vim.keymap.set('n', '<leader>wv', ':vsplit <CR>', { desc = 'Vertically split the window' })
+vim.keymap.set('n', '<leader>wq', ':quit <CR>', { desc = 'Close current window' })
+vim.keymap.set('n', '<leader>ws', ':split <CR>', { desc = 'Horizontally split the window' })
+vim.keymap.set('n', '<leader>wx', ':wincmd x <CR>', { desc = 'Switch positions between windows' })
+vim.keymap.set('n', '<leader>wh', ':wincmd H <CR>', { desc = 'Move window left' })
+vim.keymap.set('n', '<leader>wl', ':wincmd L <CR>', { desc = 'Move window right' })
+vim.keymap.set('n', '<leader>wk', ':wincmd K <CR>', { desc = 'Move window up' })
+vim.keymap.set('n', '<leader>wj', ':wincmd J <CR>', { desc = 'Move window down' })
+vim.keymap.set('n', '<leader>wf', ':only <CR>', { desc = 'Close all windows but the current' })
 -- TIP: Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+-- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CRv
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 -- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
@@ -264,6 +275,23 @@ require('lazy').setup({
     config = true,
   },
 
+  --
+  --
+  -- THEMERY IMPORT DER IKKE VIRKER
+  -- {
+  --   'zaldih/themery.nvim',
+  --   lazy = false,
+  --   config = function()
+  --     require('themery').setup {
+  --       themes = { 'gruvbox', 'ayu', 'tokyonight' }, -- Your list of installed colorschemes.
+  --       livePreview = true, -- Apply theme while picking. Default to true.
+  --     }
+  --   end,
+  -- },
+  --
+  --
+  --
+  --
   -- Use `opts = {}` to force a plugin to be loaded.
   -- Here is a more advanced example where we pass configuratio
 
@@ -561,7 +589,7 @@ require('lazy').setup({
 
           -- Fuzzy find all the symbols in your current workspace.
           --  Similar to document symbols, except searches over your entire project.
-          map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+          map('<leader>wS', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
