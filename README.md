@@ -8,6 +8,17 @@ Personal Keybinds
 |:--    |:----      |
 |space-g-g|Open Neogit at whatever directory the current buffer is located|
 |space-o-p|Open Neotree, a tree-style file explorer at current directory|
+|space-f-s|Save/write current buffer to file|
+|space-ww|Cycle cursor between open windows|
+|space-w-v|Vertically split the window|
+|space-w-s|Horizontally split the window|
+|space-w-q|Quit the current window|
+|space-w-x|Swap positions on windows|
+|space-w-h|Move window left|
+|space-w-l|Move window right|
+|space-w-k|Move window up|
+|space-w-j|Move window down|
+|space-w-f|Focus window; closes all other windows than the current|
 
 ## Introduction
 
