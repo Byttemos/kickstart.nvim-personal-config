@@ -189,6 +189,7 @@ vim.keymap.set('n', '<leader>wl', ':wincmd L <CR>', { desc = 'Move window right'
 vim.keymap.set('n', '<leader>wk', ':wincmd K <CR>', { desc = 'Move window up' })
 vim.keymap.set('n', '<leader>wj', ':wincmd J <CR>', { desc = 'Move window down' })
 vim.keymap.set('n', '<leader>wf', ':only <CR>', { desc = 'Close all windows but the current' })
+vim.keymap.set('n', '-', ':Oil <CR>', { desc = 'Open oil file manager' })
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CRv
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
@@ -275,8 +276,17 @@ require('lazy').setup({
     config = true,
   },
 
+  {
+    'stevearc/oil.nvim',
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {},
+    -- Optional dependencies
+    dependencies = { { 'echasnovski/mini.icons', opts = {} } },
+    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+  },
   --
-  --
+
   -- THEMERY IMPORT DER IKKE VIRKER
   -- {
   --   'zaldih/themery.nvim',
@@ -294,7 +304,6 @@ require('lazy').setup({
   --
   -- Use `opts = {}` to force a plugin to be loaded.
   -- Here is a more advanced example where we pass configuratio
-
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
   --    require('gitsigns').setup({ ... })
   --
